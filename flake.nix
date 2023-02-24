@@ -31,7 +31,7 @@
           inherit name;
           drv = packages.${name};
         };
-        defaultApp = apps.${system};
+        defaultApp = apps.${name}.${system};
 
         checks = self.packages.${system};
         hydraJobs = self.packages.${system};
